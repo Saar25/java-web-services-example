@@ -8,9 +8,12 @@
     </parent>
 
     <artifactId>apps</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <name>web-services.apps</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>soap-server</module>
+    </modules>
 
     <dependencies>
     </dependencies>
