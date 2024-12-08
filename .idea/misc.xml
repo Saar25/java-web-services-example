@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/RESTfullApp/pom.xml" />
         <option value="$PROJECT_DIR$/apps/pom.xml" />
         <option value="$PROJECT_DIR$/apps/soap-client/pom.xml" />
+        <option value="$PROJECT_DIR$/soap-service/pom.xml" />
       </set>
     </option>
   </component>
