@@ -27,6 +27,20 @@ public class AnimalServiceProxy {
         return new Gson().fromJson(body, Animal[].class);
     }
 
+    public Animal[] getAllAnimalsOfType(String type) throws IOException, InterruptedException {
+        final HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8080/animal?type=" + type))
+            .GET()
+            .build();
+
+        final HttpResponse<String> response = httpClient.send(
+            request, HttpResponse.BodyHandlers.ofString());
+
+        final String body = response.body();
+
+        return new Gson().fromJson(body, Animal[].class);
+    }
+
     public Animal getAnimalByName(String name) throws IOException, InterruptedException {
         final HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create("http://localhost:8080/animal/" + name))

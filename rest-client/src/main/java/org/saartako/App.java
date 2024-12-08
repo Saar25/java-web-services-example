@@ -13,6 +13,9 @@ public class App {
             final Animal[] allAnimals = animalServiceProxy.getAllAnimals();
             System.out.println("All animals:\n" + Arrays.toString(allAnimals));
 
+            final Animal[] allCats = animalServiceProxy.getAllAnimalsOfType("cat");
+            System.out.println("All cats:\n" + Arrays.toString(allCats));
+
             final Animal animal1 = animalServiceProxy.getAnimalByName("tom");
             System.out.println("Animal 1: " + animal1);
 
