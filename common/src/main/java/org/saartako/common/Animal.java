@@ -1,26 +1,9 @@
 package org.saartako.common;
 
-public class Animal {
+public record Animal(String type, String name, int weight) {
 
-    private final String type;
-    private final String name;
-    private final int weight;
-
-    public Animal(String type, String name, int weight) {
-        this.type = type;
-        this.name = name;
-        this.weight = weight;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getWeight() {
-        return weight;
+    @Override
+    public String toString() {
+        return name + " (" + type + ", " + weight + "kg)";
     }
 }

@@ -1,24 +1,23 @@
 package org.saartako;
 
-import java.io.IOException;
+import org.saartako.common.Animal;
 
-/**
- * Hello world!
- */
+import java.io.IOException;
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
         final AnimalServiceProxy animalServiceProxy = new AnimalServiceProxy();
 
         try {
-            final String allAnimals = animalServiceProxy.getAllAnimals();
+            final Animal[] allAnimals = animalServiceProxy.getAllAnimals();
+            System.out.println("All animals:\n" + Arrays.toString(allAnimals));
 
-            System.out.println("All animals:\n" + allAnimals);
+            final Animal animal1 = animalServiceProxy.getAnimalByName("tom");
+            System.out.println("Animal 1: " + animal1);
 
-            final String animal1 = animalServiceProxy.getAnimalByName("tom");
-            final String animal2 = animalServiceProxy.getAnimalByName("meow");
-
-            System.out.println("Animal 1:\n" + animal1);
-            System.out.println("Animal 2:\n" + animal2);
+            final Animal animal2 = animalServiceProxy.getAnimalByName("meow");
+            System.out.println("Animal 2: " + animal2);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

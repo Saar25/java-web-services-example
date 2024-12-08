@@ -8,9 +8,7 @@
     </parent>
 
     <artifactId>common</artifactId>
-    <packaging>jar</packaging>
-
-    <name>core</name>
+    <name>common</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -20,11 +18,5 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 </project>

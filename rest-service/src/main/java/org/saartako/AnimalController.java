@@ -25,6 +25,6 @@ public class AnimalController {
     @GetMapping("/animal/{name}")
     public Animal allAnimalByName(@PathVariable(value = "name") String name) {
         final String lowercaseName = name.toLowerCase();
-        return animals.stream().filter(animal -> animal.getName().toLowerCase().equals(lowercaseName)).findAny().orElse(null);
+        return animals.stream().filter(animal -> animal.name().toLowerCase().equals(lowercaseName)).findAny().orElse(null);
     }
 }
