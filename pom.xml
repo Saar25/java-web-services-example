@@ -11,8 +11,8 @@
     <url>http://maven.apache.org</url>
 
     <modules>
-        <module>apps</module>
         <module>rest-service</module>
+        <module>soap-service</module>
     </modules>
 
     <properties>

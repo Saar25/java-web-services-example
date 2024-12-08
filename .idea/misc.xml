@@ -11,6 +11,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/RESTfullApp/pom.xml" />
+        <option value="$PROJECT_DIR$/apps/pom.xml" />
         <option value="$PROJECT_DIR$/apps/soap-client/pom.xml" />
       </set>
     </option>
