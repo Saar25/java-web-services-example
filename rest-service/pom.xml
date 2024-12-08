@@ -47,6 +47,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- json parsing into classes -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+
         <!-- local dependencies -->
         <dependency>
             <groupId>org.saartako</groupId>
