@@ -1,13 +1,13 @@
 services:
-  soap-server:
+  rest-service:
     build:
       context: .
       dockerfile: ./Dockerfile
       args:
-        APP_NAME: soap-server
-    working_dir: /usr/app
+        APP_NAME: rest-service
+    working_dir: /app
     volumes:
-      - ./:./
+      - ./rest-service:./rest-service
   postgres:
     image: postgres:17.2-alpine3.20
     ports:
