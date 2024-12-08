@@ -13,6 +13,7 @@
     <modules>
         <module>rest-service</module>
         <module>soap-service</module>
+        <module>rest-client</module>
     </modules>
 
     <properties>
