@@ -1,4 +1,4 @@
-package org.saartako;
+package org.saartako.common;
 
 public class Animal {
 
