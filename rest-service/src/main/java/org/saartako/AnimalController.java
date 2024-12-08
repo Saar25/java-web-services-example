@@ -1,15 +1,13 @@
 package org.saartako;
 
 import org.saartako.common.Animal;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@RequestMapping("animal")
 public class AnimalController {
 
     private final List<Animal> animals = Arrays.asList(
@@ -21,13 +19,13 @@ public class AnimalController {
         new Animal("Zebra", "Martin", 60)
     );
 
-    @GetMapping("/animal")
+    @GetMapping("")
     public List<Animal> allAnimals(@RequestParam(name = "type", required = false) String type) {
         return type == null ? animals : animals.stream().filter(
             animal -> animal.type().toLowerCase().equalsIgnoreCase(type)).toList();
     }
 
-    @GetMapping("/animal/{name}")
+    @GetMapping("/{name}")
     public Animal allAnimalByName(@PathVariable(name = "name") String name) {
         return animals.stream().filter(
             animal -> animal.name().toLowerCase().equalsIgnoreCase(name)).findAny().orElse(null);
