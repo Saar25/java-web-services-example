@@ -7,13 +7,15 @@ services:
         APP_NAME: rest-service
     working_dir: /app
     volumes:
-      - ./rest-service:./rest-service
+      - .:/app
+    ports:
+      - "8080:8080"
   postgres:
     image: postgres:17.2-alpine3.20
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
-      - ~/database/postgres:/var/lib/postgresql/data
+      - ./database/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres

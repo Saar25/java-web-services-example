@@ -16,6 +16,7 @@ public class AnimalController {
         new Animal("Cat", "Chubby", 6),
         new Animal("Cat", "Skinny", 4),
         new Animal("Horse", "Tom", 80),
+        new Animal("Lion", "Alex", 75),
         new Animal("Zebra", "Martin", 60)
     );
 
