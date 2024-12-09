@@ -18,7 +18,7 @@ mvn -pl rest-service clean spring-boot:run
 Or via docker
 
 ```bash
-docker compose run --rm --build rest-service
+docker compose up --build rest-service
 ```
 
 then access it through `http://localhost:8080/animal`  
