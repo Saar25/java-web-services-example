@@ -3,6 +3,7 @@ package org.saartako;
 import org.saartako.common.Animal;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 @RequestMapping("animal")
 public class AnimalController {
 
-    private final List<Animal> animals = Arrays.asList(
+    private final List<Animal> animals = new ArrayList<>(Arrays.asList(
         new Animal("Dog", "Bobby", 10),
         new Animal("Cat", "Meow", 5),
         new Animal("Cat", "Chubby", 6),
@@ -18,7 +19,7 @@ public class AnimalController {
         new Animal("Horse", "Tom", 80),
         new Animal("Lion", "Alex", 75),
         new Animal("Zebra", "Martin", 60)
-    );
+    ));
 
     @GetMapping("")
     public List<Animal> allAnimals(@RequestParam(name = "type", required = false) String type) {
