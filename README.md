@@ -30,6 +30,6 @@ A dummy client that sends requests to the rest-server and prints them
 Run it using the ide or via maven
 
 ```bash
-#TODO
+mvn -pl rest-client compile exec:java
 ```
 
