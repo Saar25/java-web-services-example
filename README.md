@@ -45,3 +45,12 @@ mvn -pl soap-service clean spring-boot:run
 
 then access it through `http://localhost:8080/ws`  
 or using soap-client module
+
+## SOAP client
+
+A dummy client that sends requests to the soap-service and prints them  
+Run it using the ide or via maven
+
+```bash
+mvn -pl soap-client compile exec:java
+```

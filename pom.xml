@@ -15,6 +15,7 @@
         <module>rest-client</module>
         <module>common</module>
         <module>soap-service</module>
+        <module>soap-client</module>
     </modules>
 
     <properties>
