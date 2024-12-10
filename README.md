@@ -54,3 +54,21 @@ Run it using the ide or via maven
 ```bash
 mvn -pl soap-client compile exec:java
 ```
+
+or using curl
+
+```bash
+curl --header "content-type: text/xml" -d '
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:gs="http://saartako.org/gen">
+  <soapenv:Header />
+  <soapenv:Body>
+    <gs:getAnimalRequest>
+      <gs:name>Tom</gs:name>
+    </gs:getAnimalRequest>
+  </soapenv:Body>
+</soapenv:Envelope>
+' http://localhost:8080/ws 
+```
+
+which you can format using `... | xmllint --format -`
