@@ -24,12 +24,12 @@ public class AnimalController {
     @GetMapping("")
     public List<Animal> allAnimals(@RequestParam(name = "type", required = false) String type) {
         return type == null ? animals : animals.stream().filter(
-            animal -> animal.type().toLowerCase().equalsIgnoreCase(type)).toList();
+            animal -> animal.type().equalsIgnoreCase(type)).toList();
     }
 
     @GetMapping("/{name}")
     public Animal allAnimalByName(@PathVariable(name = "name") String name) {
         return animals.stream().filter(
-            animal -> animal.name().toLowerCase().equalsIgnoreCase(name)).findAny().orElse(null);
+            animal -> animal.name().equalsIgnoreCase(name)).findAny().orElse(null);
     }
 }
