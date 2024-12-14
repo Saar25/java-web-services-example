@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://example.soap.saartako.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://example.soap.saartako.org/">
+
+<xs:element name="getAllAnimals" type="tns:getAllAnimals"/>
+
+<xs:element name="getAllAnimalsResponse" type="tns:getAllAnimalsResponse"/>
+
+<xs:element name="getAnimal" type="tns:getAnimal"/>
+
+<xs:element name="getAnimalResponse" type="tns:getAnimalResponse"/>
+
+<xs:element name="getAnimalsOfType" type="tns:getAnimalsOfType"/>
+
+<xs:element name="getAnimalsOfTypeResponse" type="tns:getAnimalsOfTypeResponse"/>
+
+<xs:complexType name="getAnimal">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAnimalResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:animal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="animal">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="weight" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAnimals">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllAnimalsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:animal" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAnimalsOfType">
+<xs:sequence>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAnimalsOfTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:animal" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

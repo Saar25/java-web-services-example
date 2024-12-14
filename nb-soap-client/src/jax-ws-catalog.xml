@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/soap-example/AnimalService" uri="wsdl/localhost_8080/soap-example/AnimalService.xml"/>
+    <system systemId="http://localhost:8080/soap-example/AnimalService?wsdl" uri="wsdl/localhost_8080/soap-example/AnimalService.wsdl"/>
+    <system systemId="http://localhost:8080/soap-example/AnimalService?xsd=1" uri="wsdl/localhost_8080/soap-example/AnimalService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/nb-soap-service/AnimalService?wsdl" uri="wsdl/localhost_8080/nb-soap-service/AnimalService.wsdl"/>
+    <system systemId="http://localhost:8080/nb-soap-service/AnimalService?xsd=1" uri="wsdl/localhost_8080/nb-soap-service/AnimalService.xsd_1.xsd"/>
+</catalog>

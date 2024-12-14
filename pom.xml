@@ -16,6 +16,8 @@
         <module>common</module>
         <module>soap-service</module>
         <module>soap-client</module>
+        <module>nb-soap-service</module>
+        <module>nb-soap-client</module>
     </modules>
 
     <properties>

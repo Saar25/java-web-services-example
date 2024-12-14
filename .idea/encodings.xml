@@ -9,6 +9,11 @@
     <file url="file://$PROJECT_DIR$/apps/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nb-soap-client/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nb-soap-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nb-soap-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nb-soap-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nb-soap-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rest-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rest-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rest-service/src/main/java" charset="UTF-8" />
