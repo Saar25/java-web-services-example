@@ -21,6 +21,14 @@ public class App {
 
             final Animal animal2 = animalServiceProxy.getAnimalByName("meow");
             System.out.println("Animal 2: " + animal2);
+
+/*
+            final boolean success = animalServiceProxy.createAnimal(new Animal("Spider", "Saar", 1));
+            System.out.println("Operation:\n" + success);
+*/
+
+            System.out.println("\n\nPress Enter key to continue...");
+            System.in.read();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -32,4 +32,9 @@ public class AnimalController {
         return animals.stream().filter(
             animal -> animal.name().equalsIgnoreCase(name)).findAny().orElse(null);
     }
+
+    @PostMapping("")
+    public boolean createAnimal(@RequestBody Animal animal) {
+        return animals.add(animal);
+    }
 }

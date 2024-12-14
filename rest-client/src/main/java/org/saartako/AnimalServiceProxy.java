@@ -13,18 +13,20 @@ public class AnimalServiceProxy {
 
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
+    private final Gson gson = new Gson();
+
     public Animal[] getAllAnimals() throws IOException, InterruptedException {
         final HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create("http://localhost:8080/animal"))
             .GET()
             .build();
 
-        final HttpResponse<String> response = httpClient.send(
+        final HttpResponse<String> response = this.httpClient.send(
             request, HttpResponse.BodyHandlers.ofString());
 
         final String body = response.body();
 
-        return new Gson().fromJson(body, Animal[].class);
+        return this.gson.fromJson(body, Animal[].class);
     }
 
     public Animal[] getAllAnimalsOfType(String type) throws IOException, InterruptedException {
@@ -33,12 +35,12 @@ public class AnimalServiceProxy {
             .GET()
             .build();
 
-        final HttpResponse<String> response = httpClient.send(
+        final HttpResponse<String> response = this.httpClient.send(
             request, HttpResponse.BodyHandlers.ofString());
 
         final String body = response.body();
 
-        return new Gson().fromJson(body, Animal[].class);
+        return this.gson.fromJson(body, Animal[].class);
     }
 
     public Animal getAnimalByName(String name) throws IOException, InterruptedException {
@@ -47,11 +49,28 @@ public class AnimalServiceProxy {
             .GET()
             .build();
 
-        final HttpResponse<String> response = httpClient.send(
+        final HttpResponse<String> response = this.httpClient.send(
             request, HttpResponse.BodyHandlers.ofString());
 
         final String body = response.body();
 
-        return new Gson().fromJson(body, Animal.class);
+        return this.gson.fromJson(body, Animal.class);
+    }
+
+    public boolean createAnimal(Animal animal) throws IOException, InterruptedException {
+        final String json = this.gson.toJson(animal);
+
+        final HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8080/animal"))
+            .POST(HttpRequest.BodyPublishers.ofString(json))
+            .header("Content-Type", "application/json")
+            .build();
+
+        final HttpResponse<String> response = this.httpClient.send(
+            request, HttpResponse.BodyHandlers.ofString());
+
+        final String body = response.body();
+
+        return Boolean.parseBoolean(body);
     }
 }
