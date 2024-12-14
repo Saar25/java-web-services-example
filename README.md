@@ -72,3 +72,8 @@ curl --header "content-type: text/xml" -d '
 ```
 
 which you can format using `... | xmllint --format -`
+
+## nb soap
+
+'nb-soap-service' and 'nb-soap-client' can be run using netbeans ide
+
